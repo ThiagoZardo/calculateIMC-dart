@@ -8,8 +8,8 @@ class CalculadoraIMC {
   }
 
   String calculaIMC() {
-    if (_valor1 < 0 || _valor2 < 0) {
-      throw ArgumentError('Valor inválido');
+    if (_valor1 <= 0 || _valor2 <= 0) {
+      throw Exception('Valor inválido');
     }
     double imc = _valor1 / (_valor2 * _valor2);
     return imc.toStringAsFixed(2);
